@@ -23,7 +23,7 @@ public class RoadController : MonoBehaviour
     /// </summary>
     /// <param name="other"></param>
     private void OnTriggerExit(Collider other)
-    {
+    {   
         if (other.CompareTag("Player"))
         {
             GameManager.Instance.DestroyRoad(gameObject);

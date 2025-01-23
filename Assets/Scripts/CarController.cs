@@ -34,7 +34,7 @@ public class CarController : MonoBehaviour
     /// <param name="direction"></param>
     public void Move(float direction)
     {
-        transform.Translate(Vector3.right * moveSpeed * Time.deltaTime);
+        transform.Translate(Vector3.right * (direction * moveSpeed * Time.deltaTime));
         transform.position = 
             new Vector3(Mathf.Clamp(transform.position.x, -2f, 2f), 0, transform.position.z);
     }
